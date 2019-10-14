@@ -1,0 +1,22 @@
+h3
+{
+    color:pink;
+    font-style: italic;
+}
+
+.blueColor{
+    color:rgb(54, 31, 185);
+    font-family:arial;
+    font-size:24px;
+}
+#mysubmit{
+    color:rgb(0, 217, 255);
+    font-family:arial;
+    font-size:28px;
+}
+
+#homepage{
+    color:rgb(201, 106, 18);
+    font-family:verdana;
+    font-size:24px;
+}

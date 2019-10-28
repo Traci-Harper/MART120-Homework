@@ -1,0 +1,86 @@
+
+<html>
+<title>Contact</title>
+<h3>Contact</h3>  
+            <head>
+                <script>
+                function validateEmail() {
+                    var Email = document.myForm.Email.value;
+                    
+                    if (Email== "" ) {
+                        alert("Please enter correct email")
+                        document.myForm.Email.focus();
+                        return false;
+                    }
+                    return( true );
+                }
+                </script>
+                <script>
+                function validateName() {
+                    var Name = document.myForm.Name.value;
+                    
+                    if (Name=="") {
+                        alert("Please enter name")
+                        document.myForm.Name.focus();
+                        return false;
+                    }
+                    return( true );
+                }
+                </script>
+                 <script>
+                        function validateTerms() {
+                            var Terms = document.myForm.Terms.value;
+                            
+                            if (Terms=="") {
+                                alert("Please choose terms")
+                                document.myForm.Terms.focus();
+                                return false;
+                            }
+                            return( true );
+                        }
+                        </script>
+                  <script>
+                        function getData()
+                        {
+                            var name = document.getElementById("Name").value;
+                            var Email = document.getElementById("Email").value;
+                            var Terms = document.getElementById("Terms").value;
+                         
+            
+                            window.alert("Name: " + name + " Email: " + Email + " Terms: " + Terms);
+                        }
+                    </script>      
+             </head>
+             
+             <body>
+                <form name = "myForm" onsubmit = "validateEmail();" onsubmit = "validateName();">
+                   <table>
+                      
+                      <tr>
+                         <td align = "right">Name</td>
+                         <td><input type = "text" Id= Name name = "Name" /></td>
+                      </tr>
+                      <tr>
+                         <td align = "right">Email</td>
+                         <td><input type = "text" Id= Email name = "Email" /></td>
+                      </tr>
+                      <tr>
+                         <td align = "right">Terms Agreement</td>
+                         <td>
+                            <select name = "Terms" Id= Terms>
+                               <option value = "-1" selected>[choose yours]</option>
+                               <option Id=Yes value = "Yes">Yes</option>
+                               <option Id=No value = "No">No</option>
+                            </select>
+                         </td>
+                      </tr>
+                      <tr>
+                         <td align = "right"></td>
+                         <td><input type = "submit" value = "Submit" onClick="getData();" /></td>
+                      </tr>
+                      
+                   </table>
+                </form>      
+             </body>
+             </html>
+

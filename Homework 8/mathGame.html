@@ -1,0 +1,70 @@
+<html>
+    <title>Math Game</title>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                    <body>
+            <style>
+                    <button type="button" class="btn">Basic</button>
+                    <button type="button" class="btn btn-default">Default</button>
+                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-success">Success</button>
+                    <button type="button" class="btn btn-info">Info</button>
+                    <button type="button" class="btn btn-warning">Warning</button>
+                    <button type="button" class="btn btn-danger">Danger</button>
+                    <button type="button" class="btn btn-link">Link</button>
+                    </body>
+            <link rel="stylesheet" type="text/css" href="mainstyle.css">
+            </style>
+            <script>
+                var actualAnswer;
+                var number1;
+                var number2;
+                function printQuestion()
+                {
+                    actualAnswer = number1 + number2;
+                    document.getElementById("theQuestion").innerHTML = "What is " + number1 + "+" + number2 + "?";
+                }
+                function checkAnswer()
+                {
+                    var answer = document.getElementById("txtAnswer").value;
+                    if(answer == actualAnswer)
+                    {
+                        document.getElementById("finalResult").innerHTML = "Good job!";
+                        runGame();
+                    }
+                    else
+                    {
+                        document.getElementById("finalResult").innerHTML = "Try Again!";
+                    }
+                }
+
+                function runGame()
+                {
+                    for(var i = 0; i < 10; i++)
+                    {
+                        number1 = Math.floor(Math.random() * 10);
+                        number2 = Math.floor(Math.random() * 10);
+                    }
+                    printQuestion();
+                }
+            </script>
+            </head>
+            <body onload="runGame();">
+                <div id="theQuestion"></div>
+                    <table>
+                        <tr>
+                            <td>Your answer</td>
+                            <td><input type="text" id="txtAnswer"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button id="btnSubmit" onClick="checkAnswer();">Submit</button></td>
+                        </tr>
+                    </table>
+                <div id="finalResult"></div>
+                <p></p>
+                <a href="homePage.html"id="homepage" button type="Homepage" type="button" class="btn btn-success">Homepage</a><br></p>
+            </body>
+        </html>

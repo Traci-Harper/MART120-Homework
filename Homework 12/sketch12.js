@@ -1,7 +1,7 @@
 /*
     Author: Traci Harper
     Purpose: Adding Complex Functions
-    Date: 11/17
+    Date: 11/19
     Revised Date:
 */
 
@@ -13,7 +13,7 @@ var speed7;
 var speedY =5;
 
 
-var x3 = 200;                 ///rect variables
+var x3 = 200;                 /// blue rect variables
 var y3 = 230;
 var widthRect = 60;
 var heightRect = 10;
@@ -29,6 +29,8 @@ var mousey = 0;
 
 var exitX=795;            ////exit variables
 var exitY=550;
+var exitWidth=15;
+var exitHeight=70;
 
 function setup()
 {
@@ -126,7 +128,7 @@ function moveBlueRectangle()
 function createExit()
 {
     fill (57,255,20);                      
-    rect(exitX,exitY,15,70);
+    rect(exitX,exitY,exitWidth,exitHeight);
     textSize(15);
     fill(255,255,255);
     text ('Exit', 765,540);
@@ -134,21 +136,18 @@ function createExit()
 function youWin()
 {
     print (text)
-    textSize(15);
-    fill(255,255,255);
-    text ('You Win!', 290,390);
-}
-function playerExit()
-{
-  if(x >= exitX-5 && y >= exitY-5)      
-  {
-    print (text)
     textSize(25);
     fill(255,255,255);
     text ('You Win!', 290,390);
     playerMovement=math.floor;
+}
+function playerExit()
+{
+  if(x >= exitX+5 && y >= exitY+15)      
+  {
+    youWin();
   }
-  
+    
 }
 
 

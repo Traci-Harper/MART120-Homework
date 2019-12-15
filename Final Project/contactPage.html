@@ -1,0 +1,78 @@
+
+
+
+
+<html>
+        <h3>Contact Us</h3>
+        <title>Contact</title>
+        <head>
+                
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                 <style>  
+                        <button type="button" class="btn">Basic</button>
+                        <button type="button" class="btn btn-default">Default</button>
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-link">Link</button>
+                
+                <link rel="stylesheet" type="text/css" href="mainstyle.css">
+                 </style> 
+                <style>
+                body  {
+                    background-color: #cccccc;
+                    background-size: cover;
+                    height: 500px; 
+                    background-position: center; 
+                    background-repeat: no-repeat; 
+                    background-size: cover;
+                        }
+                        
+                </style>
+                <script>
+                            var actualAnswer;
+                            var name
+                            var email 
+                            var terms
+                           
+                            function checkAnswer()
+                            {
+                                var answer = document.getElementById("txtAnswer").value;
+                                if(answer == actualAnswer)
+                                {
+                                    document.getElementById("finalResult").innerHTML = "Good job!";
+                                }
+                                else
+                                {
+                                    document.getElementById("finalResult").innerHTML = "Not quite!";
+                                }
+                            
+                            }
+                        </script>
+        </head>
+        <body onload="checkAnswer();">
+                    <div id="theQuestion"></div>
+                    <table>
+                    <tr>
+                    <td>Name</td>
+                    <td><input type="text" id="txtAnswer"></td>
+                    <tr>
+                    <td>Email</td>
+                    <td><input type="text" id="txtAnswer"></td>
+                    </tr>
+                    <tr>
+                    <td colspan="2"><button id="btnSubmit" onClick="checkAnswer();">Submit</button></td>
+                     </tr>
+                    </table>
+                    <div id="finalResult"></div>
+                    </body>
+                     </html>
+           
+            <a href="homePage.html"id="homepage" button type="Homepage" type="button" class="btn btn-success">Homepage</a>
+        </body>
+</html>

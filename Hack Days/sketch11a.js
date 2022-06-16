@@ -28,7 +28,7 @@ var mousey = 0;
 
 function setup()
 {
-    createCanvas(800,800);
+    createCanvas(800,600);
     speed7 = Math.floor(Math.random()*10+1);
     movement3 = Math.floor(Math.random()*10+1);
 }

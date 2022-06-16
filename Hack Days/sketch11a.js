@@ -5,13 +5,13 @@
     Revised Date:
 */
 
-/*
+
 var x7 = 200;                ///pink cirlce
 var y7 = 150;
 var diameter7 = 50;
 var speed7;
 var speedY =5;
-*/
+
 
 var x3 = 200;               ///rect variables
 var y3 = 230;

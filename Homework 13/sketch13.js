@@ -7,7 +7,7 @@
 
 
 
-var xCoord =[];                   
+var xCoord =[];
 var yCoord =[];
 var diameterValues=[];
 var speedForX=[];
@@ -16,7 +16,7 @@ var speedForY=[];
 var x7 = 200;                   ///pink circle
 var y7 = 150;
 var diameter7 = 50;
-var speed7; 
+var speed7;
 var speedY =5;
 
 
@@ -49,7 +49,7 @@ function setup()
     var speedY=5;
     for (var i = 0; i < 5; i++)
     {
-      
+
       xCoord[i]= circX;
       yCoord[i]=circY;
       diameterValues[i]= circDiameter;
@@ -60,24 +60,24 @@ function setup()
       circDiameter+=13;
       speedX+=2;
       speedY+=1;
-      
+
     }
-   
+
    /* xCoord[1]=50;
-    
+
     yCoord[1]=150;
 
-    
+
     diameterValues[1]=75;
 
-    
+
     speedForX[1]=7;
-    
+
     speedForY[1]=9;*/
-    
+
 
     speed7 = Math.floor(Math.random()*10+1);
-    movement3 = Math.floor(Math.random()*10+1); 
+    movement3 = Math.floor(Math.random()*10+1);
 
 }
 function draw()
@@ -104,14 +104,14 @@ function createCircle()
   {
     circle(xCoord[i],yCoord[i], diameterValues[i]);
   }
-  
+
   //circle(xCoord[1],yCoord[1], diameterValues[1]);
 }
 function moveCircle()
 {
   for (var i = 0; i < xCoord.length; i++)
   {
-    if (xCoord[i] >= width-diameterValues[i]/2 || xCoord[i]  <= diameterValues[i]/2)      
+    if (xCoord[i] >= width-diameterValues[i]/2 || xCoord[i]  <= diameterValues[i]/2)
     {
       speedForX[i]  *= -1;
     }
@@ -124,7 +124,7 @@ function moveCircle()
   }
 }
  /*
-  if (xCoord[1] >= width-diameterValues[1] /2 || xCoord[1]  <= diameterValues[1] /2)      
+  if (xCoord[1] >= width-diameterValues[1] /2 || xCoord[1]  <= diameterValues[1] /2)
   {
     speedForX[1]  *= -1;
   }
@@ -132,7 +132,7 @@ function moveCircle()
   {
     speedForY[1]  *= -1;
   }
-  
+
 
   xCoord[1]  += speedForX[1];
   yCoord[1]  += speedForY[1];
@@ -144,7 +144,7 @@ function moveCircle()
 
 function createPlayer()
 {
-    fill(255,234,0);        
+    fill(255,234,0);
     circle(x,y,diameter);
     fill(0);
     ellipse (x,y,25,30);
@@ -152,51 +152,51 @@ function createPlayer()
 
 function playerMovement()
 {
-    if (x >= width)  
-    //(x <= width-diameter/2 || y <= height-diameter/2)       
+    if (x >= width)
+    //(x <= width-diameter/2 || y <= height-diameter/2)
     {
       x = 50;
     }
 
-    if (keyIsDown(DOWN_ARROW)) 
+    if (keyIsDown(DOWN_ARROW))
     {
       y += 10;
-    } 
-    else if (keyIsDown(UP_ARROW)) 
+    }
+    else if (keyIsDown(UP_ARROW))
     {
       y -= 10;
     }
-    else if (keyIsDown(RIGHT_ARROW)) 
+    else if (keyIsDown(RIGHT_ARROW))
     {
       x += 10;
     }
-    else if (keyIsDown(LEFT_ARROW)) 
+    else if (keyIsDown(LEFT_ARROW))
     {
       x -= 10;
     }
-  
+
 }
-function mouseClicked() 
-  { 
+function mouseClicked()
+  {
     fill(57,255,20)
-    circle (mousex, mousey, 25); 
+    circle (mousex, mousey, 25);
     mousex = mouseX;
     mousey = mouseY;
-  
+
   }
 function pinkCircle()
 {
-    fill(255,50,255);                      
+    fill(255,50,255);
     circle(x7,y7,diameter7);
 }
 function blueRectangle()
 {
-    fill (31,4,170);                       
+    fill (31,4,170);
     rect(x3,y3,widthRect,heightRect);
 }
 function movePinkCircle()
 {
-    if (x7 >= width-diameter7/2 || x7 <= diameter7/2)      
+    if (x7 >= width-diameter7/2 || x7 <= diameter7/2)
     {
       speed7 *= -1;
     }
@@ -206,10 +206,10 @@ function movePinkCircle()
     }
     x7 += speed7;
     y7 += speedY;
-}  
+}
 function moveBlueRectangle()
 {
-    if(y3 >= height-heightRect || y3 <= heightRect-10)      
+    if(y3 >= height-heightRect || y3 <= heightRect-10)
     {
       movement3 *= -1;
     }
@@ -217,7 +217,7 @@ function moveBlueRectangle()
     }
 function createExit()
 {
-    fill (57,255,20);                      
+    fill (57,255,20);
     rect(exitX,exitY,exitHeight,exitWidth);
     textSize(15);
     fill(255,255,255);
@@ -233,11 +233,8 @@ function youWin()
 }
 function playerExit()
 {
-  if(x >= exitX+5 && y >= exitY+15)      
+  if(x >= exitX+5 && y >= exitY+15)
   {
     youWin();
   }
 }
-
-
-

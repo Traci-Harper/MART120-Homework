@@ -1,17 +1,17 @@
 /*
     Author: Traci Harper
-    Purpose: Mini Game Spore
-    Date: 11/10
+    Purpose: ATM Mini Game
+    Date: 6/16/22
     Revised Date:
 */
 
-
+/*
 var x7 = 200;                ///pink cirlce
 var y7 = 150;
 var diameter7 = 50;
-var speed7; 
+var speed7;
 var speedY =5;
-
+*/
 
 var x3 = 200;               ///rect variables
 var y3 = 230;
@@ -28,14 +28,14 @@ var mousey = 0;
 
 function setup()
 {
-    createCanvas(800,600);
+    createCanvas(800,800);
     speed7 = Math.floor(Math.random()*10+1);
-    movement3 = Math.floor(Math.random()*10+1); 
+    movement3 = Math.floor(Math.random()*10+1);
 }
 function draw()
 {
     background(0);
-    fill(255,234,0);        
+    fill(255,234,0);
     circle(x,y,diameter);
     fill(0);
     ellipse (x,y,25,30);
@@ -48,30 +48,30 @@ function draw()
     textSize(15);
     fill(255,255,255);
     text ('Exit', 765,540);
-    
-  
+
+
   if (x >= width)         ///yellow circle player movment
   {
     x = 50;
   }
 
-  if (keyIsDown(DOWN_ARROW)) 
+  if (keyIsDown(DOWN_ARROW))
   {
     y += 10;
-  } 
-  else if (keyIsDown(UP_ARROW)) 
+  }
+  else if (keyIsDown(UP_ARROW))
   {
     y -= 10;
   }
-  else if (keyIsDown(RIGHT_ARROW)) 
+  else if (keyIsDown(RIGHT_ARROW))
   {
     x += 10;
   }
-  else if (keyIsDown(LEFT_ARROW)) 
+  else if (keyIsDown(LEFT_ARROW))
   {
     x -= 10;
   }
-  else if (x >= rect-diameter/2 && y <= rect-diameter/2) 
+  else if (x >= rect-diameter/2 && y <= rect-diameter/2)
   {
     print (text)
     textSize(15);
@@ -94,7 +94,7 @@ function draw()
 
 
 
-  if (y >= height) 
+  if (y >= height)
   {
     y = 50;
   }
@@ -121,15 +121,15 @@ function draw()
     }
     y3 += movement3;
     }
-    function mouseClicked() 
-    {  
+    function mouseClicked()
+    {
       mousex = mouseX;
       mousey = mouseY;
-    
-   
-    
-   
-   
+
+
+
+
+
 
 
 
@@ -142,13 +142,13 @@ function draw()
 
 
 /*}
-function keyPressed() 
+function keyPressed()
 {
-  if (key == 'd') 
+  if (key == 'd')
   {
     x += 10;
-  } 
-  else if (key == 'a') 
+  }
+  else if (key == 'a')
   {
     x -= 10;
   }*/

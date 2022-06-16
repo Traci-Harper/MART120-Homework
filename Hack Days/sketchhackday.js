@@ -1,7 +1,7 @@
 /*
     Author: Traci Harper
-    Purpose: ATM Mini Game
-    Date: 6/16/22
+    Purpose: Mini ATM Game
+    Date: 12/16/22
     Revised Date:
 */
 

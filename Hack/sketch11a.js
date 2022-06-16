@@ -16,8 +16,7 @@ var speedY =5;
 var x3 = 200;               ///rect variables
 var y3 = 230;
 var widthRect = 60;
-var heightRect = 10;
-var movement3;          ///rect movement
+          ///rect movement
 
 
 var x = 50;                 ///yellow circle
